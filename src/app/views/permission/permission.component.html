@@ -1,0 +1,28 @@
+<div class="wrapper">
+  <div class="nav-bar mb-40">
+    <button (click)="closeWebView()">close</button>
+  </div>
+
+  <div>
+    <div class="mb-20">
+      Test Geolocation: Permission {{geoPermission || "-"}}
+    </div>
+    <div class="mb-20">
+      <div>Latitude: {{currentLat}}</div>
+      <div>Longitude: {{currentLong}}</div>
+    </div>
+  </div>
+
+  <hr />
+
+  <div>
+    <div class="mb-20">
+      Test Camera: Permission {{mediaPermission || "-"}}
+    </div>
+    <video #video autoplay playsinline muted class="video-frame"></video>
+  </div>
+
+  <hr />
+
+  <button (click)="init()">re-init</button>
+</div>
